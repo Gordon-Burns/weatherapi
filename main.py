@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from flask import Flask, render_template
 import pandas as pd
 
@@ -36,6 +38,7 @@ def all_data_single_year(station, year):
     df = pd.read_csv(filepath, skiprows=20, on_bad_lines='skip')
     df["    DATE"] = df["    DATE"].astype(str)
     result = df[df["    DATE"].str.startswith(str(year))].to_dict(orient="records")
+
     return result
 
 
