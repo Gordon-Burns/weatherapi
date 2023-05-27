@@ -1,0 +1,1 @@
+## This app is a weather API where users can get data by station for a particular date or year or alternatively all data for that station
